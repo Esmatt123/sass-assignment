@@ -19,16 +19,15 @@ header {
 
 
     .nav {
-        background-color: #c3deef;
         @include display(grid);
         grid-template-columns: repeat(10, 1fr);
         grid-template-rows: repeat(1, 1fr);
         height: 100%;
 
         &__box-1 {
-            grid-column: 1 / 4;
+            grid-column: 2 / 4;
             @include display(flex);
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
 
         }
@@ -43,9 +42,22 @@ header {
                 justify-content: space-around;
                 width: 100%;
                 padding: 0;
+
+                li {
+                    margin-left: 15px;
+                    ;
+                }
             }
         }
     }
+}
+
+main {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
 }
 
 .section-1 {
@@ -53,36 +65,36 @@ header {
     width: 100%;
     @include display(grid);
     grid-template: repeat(1, 1fr) / repeat(3, 1fr);
-
+    margin-bottom: 100px;
 
     &__box-1 {
         grid-column: 1 / 3;
         @include display(inherit);
         grid-template: repeat(3, 1fr) / repeat(1, 1fr);
 
-        &__grid-box-1{
+        &__grid-box-1 {
             @include display(flex);
             align-items: flex-end;
-            padding-left: 40px;
-            p{
+
+            p {
                 margin: 0;
                 color: $genesis-blue;
             }
         }
 
-        &__grid-box-2{
+        &__grid-box-2 {
             grid-row: 2 / 4;
 
             @include display(flex);
             justify-content: center;
             align-items: center;
-            padding-left: 40px;
 
-            h1{
+            h1 {
                 font-size: 2em;
                 margin: 0;
             }
-            span{
+
+            span {
                 color: $genesis-blue;
             }
         }
@@ -92,13 +104,14 @@ header {
         @include display(flex);
         align-items: flex-end;
 
-        .mini-container{
-            .line{
+        .mini-container {
+            .line {
                 width: 30px;
                 height: 1px;
                 background-color: #979797;
             }
-            p{
+
+            p {
                 color: #979797;
                 font-style: italic;
                 margin-top: 0;
@@ -106,4 +119,215 @@ header {
         }
     }
 
+}
+
+.section-2 {
+    margin: 0 auto;
+    height: 1500px;
+    @include display(grid);
+    grid-template-rows: repeat(14, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 0;
+
+    &__img-box-1 {
+        grid-row: span 3;
+    }
+
+    &__img-box-2 {
+        grid-row: span 2;
+    }
+
+    &__img-box-3 {
+        grid-row: span 4;
+    }
+
+    &__img-box-4 {
+        grid-row: span 3;
+    }
+
+    &__img-box-5 {
+        grid-row: span 3;
+    }
+
+    &__img-box-6 {
+        grid-row: span 3;
+    }
+
+    &__img-box-7 {
+        grid-row: span 3;
+    }
+
+    &__img-box-8 {
+        grid-row: span 4;
+    }
+
+    &__img-box-9 {
+        grid-row: span 4;
+    }
+
+    &__img-box-10 {
+        grid-row: span 6;
+    }
+
+    &__img-box-11 {
+        grid-row: span 4;
+    }
+
+    &__img-box-12 {
+        grid-row: span 3;
+    }
+
+
+
+    img {
+        width: 100%;
+        object-fit: auto;
+        height: 100%;
+    }
+}
+
+.section-3 {
+    @include display(grid);
+    width: 100%;
+    height: 150px;
+    grid-template: repeat(1, 1fr) / repeat(6, 1fr);
+
+    &__box-1 {
+        grid-column: 1 / 5;
+        display: flex;
+        align-items: center;
+    }
+
+    &__box-2 {
+        @include display(flex);
+        align-items: center;
+        justify-content: center;
+
+        ul {
+            @include display(flex);
+            flex-direction: column;
+            justify-content: space-around;
+            list-style-type: none;
+            font-size: 14px;
+            padding: 0;
+            height: 50%;
+        }
+    }
+
+    &__box-3 {
+        @include display(flex);
+        align-items: center;
+        justify-content: center;
+
+        ul {
+            @include display(flex);
+            flex-direction: column;
+            justify-content: space-around;
+            list-style-type: none;
+            font-size: 14px;
+            height: 50%;
+        }
+    }
+}
+
+.section-4 {
+    @include display(grid);
+    grid-template: repeat(1, 1fr) / repeat(15, 1fr);
+    height: 250px;
+    border-top: 1px solid black;
+
+    &__box-1 {
+        grid-column: 1 / 6;
+    }
+
+    &__box-2 {
+        grid-column: 6 / 10;
+        @include display(grid);
+        grid-template: repeat(2, 1fr) / repeat(1, 1fr);
+    }
+
+    &__box-3 {
+        grid-column: 10 / 15;
+        @include display(grid);
+        grid-template: repeat(2, 1fr) / repeat(1, 1fr);
+    }
+
+    &__box-4 {
+        grid-column: 15 / 16;
+        @include display(grid);
+        grid-template: repeat(2, 1fr) / repeat(1, 1fr);
+    }
+}
+
+.section-5 {
+    @include display(grid);
+    grid-template: repeat(1, 1fr) / repeat(15, 1fr);
+    height: 250px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+
+    &__box-1 {
+        grid-column: 1 / 6;
+    }
+
+    &__box-2 {
+        grid-column: 6 / 10;
+        @include display(grid);
+        grid-template: repeat(2, 1fr) / repeat(1, 1fr);
+    }
+
+    &__box-3 {
+        grid-column: 10 / 15;
+        @include display(grid);
+        grid-template: repeat(2, 1fr) / repeat(1, 1fr);
+    }
+
+    &__box-4 {
+        grid-column: 15 / 16;
+        @include display(grid);
+        grid-template: repeat(2, 1fr) / repeat(1, 1fr);
+    }
+}
+
+footer{
+    width: 80%;
+    height: 100px;
+    margin: 0 auto;
+    @include display(grid);
+    grid-template-columns: repeat(8, 1fr);
+
+    .logo{
+        grid-column: 1 / 5;
+        @include display(flex);
+        h3{
+            padding: 0;
+            margin: 0;
+        }
+        align-items: center;
+    }
+
+    .anchortags{
+        grid-column: 5 / 7;
+        ul{
+            @include display(flex);
+            align-items: center;
+            list-style-type: none;
+            justify-content: space-evenly;
+            padding: 0;
+            margin: 0;
+            height: 100%;
+        }
+    }
+
+    .social-media{
+        grid-column: 7 / 9;
+        @include display(flex);
+        align-items: center;
+        list-style-type: none;
+        justify-content: space-evenly;
+        padding: 0;
+        margin: 0;
+        height: 100%;
+    }
 }
