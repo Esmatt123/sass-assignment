@@ -1,3 +1,5 @@
+@import 'header';
+@import 'footer';
 * {
     box-sizing: border-box;
 }
@@ -8,57 +10,18 @@
 
 $genesis-blue: #4A4FF2;
 
+a{
+    text-decoration: none;
+}
+
 body,
 html {
     width: 100%;
     height: 100%;
 }
 
-header {
-    height: 10%;
 
-
-    .nav {
-        @include display(grid);
-        grid-template-columns: repeat(10, 1fr);
-        grid-template-rows: repeat(1, 1fr);
-        height: 100%;
-
-        &__box-1 {
-            grid-column: 2 / 4;
-            @include display(flex);
-            justify-content: flex-start;
-            align-items: center;
-
-        }
-
-        &__box-2 {
-            grid-column: 8 / 10;
-
-            ul {
-                @include display(flex);
-                flex-direction: row;
-                list-style-type: none;
-                justify-content: space-around;
-                width: 100%;
-                padding: 0;
-
-                li {
-                    margin-left: 15px;
-                    ;
-                }
-            }
-        }
-    }
-}
-
-main {
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 0 auto;
-}
+@import 'main';
 
 .section-1 {
     height: 250px;
@@ -290,44 +253,3 @@ main {
     }
 }
 
-footer{
-    width: 80%;
-    height: 100px;
-    margin: 0 auto;
-    @include display(grid);
-    grid-template-columns: repeat(8, 1fr);
-
-    .logo{
-        grid-column: 1 / 5;
-        @include display(flex);
-        h3{
-            padding: 0;
-            margin: 0;
-        }
-        align-items: center;
-    }
-
-    .anchortags{
-        grid-column: 5 / 7;
-        ul{
-            @include display(flex);
-            align-items: center;
-            list-style-type: none;
-            justify-content: space-evenly;
-            padding: 0;
-            margin: 0;
-            height: 100%;
-        }
-    }
-
-    .social-media{
-        grid-column: 7 / 9;
-        @include display(flex);
-        align-items: center;
-        list-style-type: none;
-        justify-content: space-evenly;
-        padding: 0;
-        margin: 0;
-        height: 100%;
-    }
-}
