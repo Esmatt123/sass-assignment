@@ -1,11 +1,12 @@
 @import 'header';
 @import 'footer';
 @import 'main';
+@import 'colors';
 *{
     box-sizing: border-box;
 }
 
-$genesis-gray: #D8D8D8;
+
 
 .section-1{
     display: grid;

@@ -1,5 +1,7 @@
 @import 'header';
 @import 'footer';
+@import 'colors';
+
 * {
     box-sizing: border-box;
 }
@@ -8,7 +10,7 @@
     display: $n;
 }
 
-$genesis-blue: #4A4FF2;
+
 
 a{
     text-decoration: none;
