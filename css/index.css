@@ -1,3 +1,20 @@
+a {
+  text-decoration: none;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 header {
   height: 10%;
 }
@@ -54,8 +71,9 @@ header .nav__box-1 {
   -ms-grid-column: 2;
   -ms-grid-column-span: 2;
   grid-column: 2/4;
-  display: -ms-grid;
-  display: grid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
@@ -64,8 +82,8 @@ header .nav__box-1 {
           align-items: center;
 }
 header .nav__box-1 h3 {
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 header .nav__box-2 {
   -ms-grid-column: 8;
@@ -76,23 +94,40 @@ header .nav__box-2 ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  list-style-type: none;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 100%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  list-style-type: none;
   width: 100%;
-  padding: 0;
+  height: 100%;
   margin: 0;
+  padding: 0;
 }
 header .nav__box-2 ul li {
   margin-left: 15px;
+}
+
+a {
+  text-decoration: none;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 footer {
@@ -128,15 +163,15 @@ footer .anchortags ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   list-style-type: none;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  padding: 0;
   margin: 0;
+  padding: 0;
   height: 100%;
 }
 footer .social-media {
@@ -146,16 +181,20 @@ footer .social-media {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   list-style-type: none;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  padding: 0;
   margin: 0;
+  padding: 0;
   height: 100%;
+}
+
+a {
+  text-decoration: none;
 }
 
 * {
@@ -163,14 +202,12 @@ footer .social-media {
           box-sizing: border-box;
 }
 
-a {
-  text-decoration: none;
-}
-
 body,
 html {
   width: 100%;
   height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 main {
@@ -189,8 +226,8 @@ main {
 }
 
 .section-1 {
-  height: 250px;
   width: 100%;
+  height: 250px;
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: (1fr)[1];
@@ -269,7 +306,6 @@ main {
   -ms-grid-columns: 1fr 10px 1fr 10px 1fr;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
-  margin: 0;
 }
 
 .section-2 > *:nth-child(1) {
@@ -530,9 +566,9 @@ main {
   grid-row: span 3;
 }
 .section-2 img {
-  width: 100%;
   -o-object-fit: auto;
      object-fit: auto;
+  width: 100%;
   height: 100%;
 }
 
@@ -560,12 +596,12 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .section-3__box-2 ul {
   display: -webkit-box;
@@ -586,12 +622,12 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .section-3__box-3 ul {
   display: -webkit-box;
@@ -622,35 +658,27 @@ main {
   -ms-grid-column-span: 5;
   grid-column: 1/6;
 }
-.section-4__box-2 {
-  -ms-grid-column: 6;
-  -ms-grid-column-span: 4;
-  grid-column: 6/10;
+.section-4__box-2, .section-4__box-3, .section-4__box-4 {
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: (1fr)[2];
   -ms-grid-columns: (1fr)[1];
       grid-template: repeat(2, 1fr)/repeat(1, 1fr);
+}
+.section-4__box-2 {
+  -ms-grid-column: 6;
+  -ms-grid-column-span: 4;
+  grid-column: 6/10;
 }
 .section-4__box-3 {
   -ms-grid-column: 10;
   -ms-grid-column-span: 5;
   grid-column: 10/15;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: (1fr)[2];
-  -ms-grid-columns: (1fr)[1];
-      grid-template: repeat(2, 1fr)/repeat(1, 1fr);
 }
 .section-4__box-4 {
   -ms-grid-column: 15;
   -ms-grid-column-span: 1;
   grid-column: 15/16;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: (1fr)[2];
-  -ms-grid-columns: (1fr)[1];
-      grid-template: repeat(2, 1fr)/repeat(1, 1fr);
 }
 
 .section-5 {
@@ -668,33 +696,25 @@ main {
   -ms-grid-column-span: 5;
   grid-column: 1/6;
 }
-.section-5__box-2 {
-  -ms-grid-column: 6;
-  -ms-grid-column-span: 4;
-  grid-column: 6/10;
+.section-5__box-2, .section-5__box-3, .section-5__box-4 {
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: (1fr)[2];
   -ms-grid-columns: (1fr)[1];
       grid-template: repeat(2, 1fr)/repeat(1, 1fr);
+}
+.section-5__box-2 {
+  -ms-grid-column: 6;
+  -ms-grid-column-span: 4;
+  grid-column: 6/10;
 }
 .section-5__box-3 {
   -ms-grid-column: 10;
   -ms-grid-column-span: 5;
   grid-column: 10/15;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: (1fr)[2];
-  -ms-grid-columns: (1fr)[1];
-      grid-template: repeat(2, 1fr)/repeat(1, 1fr);
 }
 .section-5__box-4 {
   -ms-grid-column: 15;
   -ms-grid-column-span: 1;
   grid-column: 15/16;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: (1fr)[2];
-  -ms-grid-columns: (1fr)[1];
-      grid-template: repeat(2, 1fr)/repeat(1, 1fr);
 }

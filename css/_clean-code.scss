@@ -1,0 +1,28 @@
+a{
+    text-decoration: none;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+@mixin area($w, $h){
+    width: $w;
+    height: $h;
+}
+@mixin flexdisplay($a, $b){
+    display: flex;
+    justify-content: $a;
+    align-items: $b;
+}
+
+@mixin padmar(){
+    margin: 0;
+    padding: 0;
+}
+
+body,
+html {
+    @include area(100%, 100%);
+    @include padmar();
+}

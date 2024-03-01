@@ -1,6 +1,7 @@
+@use 'clean-code';
+
 footer{
-    width: 80%;
-    height: 100px;
+    @include area(80%, 100px);
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(8, 1fr);
@@ -18,24 +19,18 @@ footer{
     .anchortags{
         grid-column: 5 / 7;
         ul{
-            display: flex;
-            align-items: center;
+            @include flexdisplay(space-evenly, center);
             list-style-type: none;
-            justify-content: space-evenly;
-            padding: 0;
-            margin: 0;
+            @include padmar();
             height: 100%;
         }
     }
 
     .social-media{
         grid-column: 7 / 9;
-        display: flex;
-        align-items: center;
+        @include flexdisplay(space-evenly, center);
         list-style-type: none;
-        justify-content: space-evenly;
-        padding: 0;
-        margin: 0;
+        @include padmar();
         height: 100%;
     }
 }

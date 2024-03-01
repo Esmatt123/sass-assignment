@@ -2,25 +2,17 @@
 @import 'main';
 @import 'header';
 @import 'footer';
+@import 'clean-code';
 
 
-* {
-    box-sizing: border-box;
-}
 
-body,
-html {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
+
 
 .section-1 {
     display: grid;
-    width: 100%;
-    height: 500px;
+    @include area(100%, 500px);
     grid-template: repeat(1, 1fr) / repeat(7, 1fr);
+    
 
 
     &__box-1 {
@@ -28,6 +20,7 @@ html {
         height: 50%;
         display: inherit;
         grid-template: repeat(4, 1fr) / repeat(1, 1fr);
+        margin-right: 10px;
 
         h1 {
             font-size: 2.5em;
@@ -43,7 +36,7 @@ html {
         height: 100%;
 
         form {
-            height: 50%;
+            height: 40%;
             display: flex;
             flex-direction: column;
             justify-content: space-evenly;
@@ -60,8 +53,7 @@ html {
                 height: 50px;
 
                 button {
-                    height: 100%;
-                    width: 100px;
+                    @include area(100px, 100%);
                     border: none;
                     background-color: $genesis-blue;
                     color: #fff;
@@ -73,8 +65,8 @@ html {
 }
 
 .section-2 {
-    width: 100%;
-    height: 100%;
+    margin-top: 50px;
+    @include area(100%, 100%);
     display: flex;
     justify-content: center;
 
