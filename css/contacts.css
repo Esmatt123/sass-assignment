@@ -15,6 +15,11 @@ main {
 
 a {
   text-decoration: none;
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
+}
+a:hover {
+  color: #4A4FF2;
 }
 
 * {
@@ -130,6 +135,12 @@ header .nav__box-2 ul li {
 
 a {
   text-decoration: none;
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
+}
+
+a:hover {
+  color: #4A4FF2;
 }
 
 * {
@@ -210,6 +221,11 @@ footer .social-media {
 
 a {
   text-decoration: none;
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
+}
+a:hover {
+  color: #4A4FF2;
 }
 
 * {
